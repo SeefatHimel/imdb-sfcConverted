@@ -68,19 +68,19 @@ const Movies = () => {
             label: "Rank",
             path: "id",
             sorting: true,
-            content: (movie, key) => <td key={movie[key]}>{movie[key]}</td>,
+            content: (movie, key) => <td key={key}>{movie[key]}</td>,
         },
         {
             label: "Titles",
             path: "title",
             sorting: true,
-            content: (movie, key) => <td key={movie[key]}>{movie[key]}</td>,
+            content: (movie, key) => <td key={key}>{movie[key]}</td>,
         },
         {
             label: "Poster",
             path: "posterUrl",
             content: (movie, key) => (
-                <td key={movie[key]}>
+                <td key={key}>
                     <img
                         src={movie[key]}
                         style={{ height: "100px", width: "auto" }}
@@ -93,7 +93,7 @@ const Movies = () => {
             label: "Your Rating",
             path: "yourRating",
             content: (movie, key) => (
-                <td key={movie[key]}>
+                <td key={key}>
                     <Rating
                         isRated={movie[key]}
                         handleIsRated={handleIsRated}
@@ -105,7 +105,7 @@ const Movies = () => {
         {
             label: "Action",
             path: "action",
-            content: (movie, key) => <td key={movie[key]}>{movie[key]}</td>,
+            content: (movie, key) => <td key={key}>{movie[key]}</td>,
         },
     ];
 

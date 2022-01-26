@@ -22,7 +22,7 @@ const Pagination = (props) => {
                     </li>
                     {pages.map((page) => {
                         return (
-                            <>
+                            <div key={page}>
                                 <li
                                     onClick={() => {
                                         onClickPage(page);
@@ -35,7 +35,7 @@ const Pagination = (props) => {
                                 >
                                     <a className="page-link">{page}</a>
                                 </li>
-                            </>
+                            </div>
                         );
                     })}
 
